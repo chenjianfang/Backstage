@@ -1,0 +1,104 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body,.anmi{
+	width: 100%;
+	height: 100%;
+}
+a{
+	text-decoration: none;
+}
+.backstage{
+	width: 100%;
+	overflow: hidden;
+}
+.container{
+	position: relative;
+	-webkit-transition:all 1s ease;
+	transition:all 1s ease;
+	left: 0;
+}
+.header{
+	position: relative;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+.addAni{
+	left: 260px;
+}
+.header .photo{
+	width: 9%;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 2%;
+	transform:translateY(-50%);
+	-webkit-transform:translateY(-50%);
+	background:url(../images/nav.png) no-repeat; 
+	background-size: 25px;
+	background-position: center;
+	cursor: pointer;
+}
+.photo-nav{
+	width: 100%;
+}
+.header .title{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 700;
+}
+.sideNav{
+	width: 260px;
+	height: 100%;
+	background: yellow;
+	position: absolute;
+	z-index: 99;
+	left: -260px;
+	border: 0;
+	-webkit-transition:all 1s ease;
+	transition:all 1s ease;
+	text-align: center;
+}
+.reduAni{
+	left: 0;
+}
+
+
+/*侧边栏*/
+.side-a{
+	width: 100%;
+	height: 80px;
+	background: red;
+}
+.side-b{
+	width: 100%;
+	height: 70px;
+	background: #ccc;
+}
+.side-c{
+	width: 100%;
+	height: 70px;
+	background: #ccc;
+}
+.side-d{
+	width: 100%;
+	height: 70px;
+	background: #ccc;
+}
+ul{
+	list-style: none;
+	margin-bottom: 10px;
+}
+.sideNav li{
+	background: #fff;
+	line-height: 35px;
+	margin-top: 10px;
+	font-size: 12px;
+	text-align: center;
+}
+.sideNav ul{
+	display: none;
+}
