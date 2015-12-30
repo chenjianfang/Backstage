@@ -35,7 +35,7 @@ a{
 	left: 2%;
 	transform:translateY(-50%);
 	-webkit-transform:translateY(-50%);
-	background:url(../images/nav.png) no-repeat; 
+	background:url(../images/list.png) no-repeat; 
 	background-size: 25px;
 	background-position: center;
 	cursor: pointer;
@@ -53,14 +53,15 @@ a{
 .sideNav{
 	width: 260px;
 	height: 100%;
-	background: yellow;
+	background: #fff;
 	position: absolute;
 	z-index: 99;
 	left: -260px;
 	border: 0;
 	-webkit-transition:all 1s ease;
 	transition:all 1s ease;
-	text-align: center;
+	text-align: left;
+	box-shadow: inset -5px 0px 5px #ccc;
 }
 .reduAni{
 	left: 0;
@@ -70,32 +71,49 @@ a{
 /*侧边栏*/
 .side-a{
 	width: 100%;
-	height: 80px;
-	background: red;
+	padding-left: 70px!important;
+	height: 80px!important;
+	line-height: 80px!important;
+	background: url(../images/user.png) no-repeat;
+	background-size: 40px;
+	background-position: 10px center;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	box-sizing:border-box;
 }
 .side-b{
 	width: 100%;
-	height: 70px;
-	background: #ccc;
+	background: url(../images/job.png) no-repeat;
+	background-size: 20px;
+	background-position: 10px center;
 }
 .side-c{
 	width: 100%;
-	height: 70px;
-	background: #ccc;
+	background: url(../images/setting.png) no-repeat;
+	background-size: 20px;
+	background-position: 10px center;
 }
 .side-d{
 	width: 100%;
-	height: 70px;
-	background: #ccc;
+	background: url(../images/setting.png) no-repeat;
+	background-size: 20px;
+	background-position: 10px center;
+}
+.side{
+	padding-left: 45px;
+	height: 50px;
+	line-height: 50px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	box-sizing:border-box;
 }
 ul{
 	list-style: none;
-	margin-bottom: 10px;
 }
 .sideNav li{
-	background: #fff;
+	background: #d9d9d9;
 	line-height: 35px;
-	margin-top: 10px;
+	margin-bottom: 10px;
 	font-size: 12px;
 	text-align: center;
 }
