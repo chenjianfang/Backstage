@@ -1,36 +1,26 @@
 {
-	"settingA":[
-		{
-			"first":"第一条",
-			"seccond":"啊"
-		},
-		{
-			"first":"第二条",
-			"seccond":"哦"
-		},
-		{
-			"first":"第三条",
-			"seccond":"额"
-		}
-	],
-	"settingB":[
-		{
-			"first":"第一",
-			"seccond":"啊"
-		},
-		{
-			"first":"第二",
-			"seccond":"哦"
-		},
-		{
-			"first":"第三",
-			"seccond":"额"
-		}
-	]
+	"result":
+	{
+		"item":[
+			{
+				"first":"第一条",
+				"seccond":"啊"
+			},
+			{
+				"first":"第一",
+				"seccond":"哦"
+			}
+		],
+		"tip":[
+			{
+				"first":"第一tian",
+				"seccond":"啊"
+			},
+			{
+				"first":"第一tian",
+				"seccond":"啊"
+			}
+		]
+	}
 }
-
-
-
-
-
 
