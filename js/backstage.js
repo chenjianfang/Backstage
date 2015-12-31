@@ -2,6 +2,55 @@ function Stage(){
 	this.myClick();
 	this.lock = false;
 };
+
+$(function(){
+	$.ajax({
+		type:'GET',
+		url:'test.json',
+		dataType:'json',
+		success:function(data){
+		},
+		error:function(e){
+			console.log('cuole')
+		}
+	});
+});
+
+
+
+
+Stage.prototype.myAjax=function(tar){  
+		$(".tbody table").html('');
+		$.ajax({
+			type:'GET',
+			url:'test.json',
+			dataType:'json',
+			success:function(data){
+				$.each(data,function(i,n){
+					console.log(i);
+					console.log(n);
+					console.log(n[tar]);
+					var item = n[tar];  //更改json数据的项
+					for(var j = 0; j < item.length; j++){
+						var nl = '<tr>';  //一条数据
+							nl += '<td class="radio">';
+							nl += '<input type="radio">';
+							nl += '</td>';
+							nl += '<td class="tablenomal">'+item[j].first+'</td>';
+							nl += '<td class="tablenomal">'+item[j].seccond+'</td>';
+							nl += '</tr>';
+						
+						$('.tbody table').append(nl);
+					}
+
+				});
+			},
+			error:function(e){
+				console.log('cuole')
+			}
+		});
+}
+
 Stage.prototype.myClick=function(){
 	$('.header .photo').click(function(){ /*侧滑栏*/
 		$('.container').toggleClass('addAni');
@@ -21,67 +70,11 @@ Stage.prototype.myClick=function(){
 	});
 
 	$('.testClick').click(function(){ //测试点击侧边栏的选项
-		$(".tbody table").html('');
-		$.ajax({
-			type:'GET',
-			url:'test.json',
-			dataType:'json',
-			success:function(data){
-				$.each(data,function(i,n){
-					console.log(i);
-					console.log(n);
-					console.log(n.item);
-					var item = n.item;  //更改json数据的项
-					for(var j = 0; j < item.length; j++){
-						var nl = '<tr>';  //一条数据
-							nl += '<td class="radio">';
-							nl += '<input type="radio">';
-							nl += '</td>';
-							nl += '<td class="tablenomal">'+item[j].first+'</td>';
-							nl += '<td class="tablenomal">'+item[j].seccond+'</td>';
-							nl += '</tr>';
-						
-						$('.tbody table').append(nl);
-					}
-
-				});
-			},
-			error:function(e){
-				console.log('cuole')
-			}
-		});
+		that.myAjax('item');
 	});
 
 	$('.testMy').click(function(){ //测试点击侧边栏的选项
-		$(".tbody table").html('');
-		$.ajax({
-			type:'GET',
-			url:'test.json',
-			dataType:'json',
-			success:function(data){
-				$.each(data,function(i,n){
-					console.log(i);
-					console.log(n);
-					console.log(n.tip);
-					var item = n.tip;  //更改json数据的项
-					for(var j = 0; j < item.length; j++){
-						var nl = '<tr>';  //一条数据
-							nl += '<td class="radio">';
-							nl += '<input type="radio">';
-							nl += '</td>';
-							nl += '<td class="tablenomal">'+item[j].first+'</td>';
-							nl += '<td class="tablenomal">'+item[j].seccond+'</td>';
-							nl += '</tr>';
-						
-						$('.tbody table').append(nl);
-					}
-
-				});
-			},
-			error:function(e){
-				console.log('cuole')
-			}
-		});
+		that.myAjax('tip');
 	});
 
 
