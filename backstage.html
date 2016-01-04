@@ -45,16 +45,32 @@
 			<div class="detail">
 				<div class="thead">
 					<ul>
-						<li>增加</li>
-						<li>删除</li>
-						<li>更改</li>
-						<li>查询</li>
+						<li id="increase">增加</li>
+						<li id="delete">删除</li>
+						<li id="change">更改</li>
+						<li id="query">查询</li>
 					</ul>
+				</div>
+				
+				<div class="op-container">
+					<div class="op-cre">
+						<form method="POST" onsubmit="return false">
+							<div class="op-input">
+								<input class="item1" type="text" placeholder="输入项目一" />
+							</div>
+							<div class="op-input">
+								<input class="item2" type="text" placeholder="输入项目二" />
+							</div>
+							<div class="op-input push">
+								<input class="data-push" type="submit" value="确定" />
+							</div>
+						</form>
+					</div>
 				</div>
 				<div class="tbody">
 					<table>
 						<!-- <tr>
-							<td class='radio'>
+							<td name="back" class='radio'>
 								<input type='radio'>
 							</td>
 							<td class='tablenomal'>详情</td>

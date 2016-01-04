@@ -1,55 +1,60 @@
-function Stage(){
-	this.myClick();
-	this.lock = false;
-};
+var result;  // 获得从后台返回的数据
 
 $(function(){
 	$.ajax({
 		type:'GET',
-		url:'test.json',
+		url:'http://127.0.0.1:8080/test.json',
 		dataType:'json',
 		success:function(data){
+			result = data;
 		},
-		error:function(e){
-			console.log('cuole')
+		error:function(){
+			console.log('error');
 		}
 	});
 });
 
+function Stage(){  //入口函数
+	this.myClick();
+	this.operation();
+	this.lock = false;
+};
+Stage.prototype.operation = function(){  //增删改查操作
+	$('#delete').click(function(){ // 删除操作
+		var tt = $("input[type='radio']:checked").parents('tr').remove();
+		console.log(tt);
+	});
+	$('#increase').click(function(){
+		$('.op-container').show();
+	});
+	$('.data-push').click(function(){
+		$(this).parents('.op-container').hide();
+	});
+};
 
+Stage.prototype.myAjax=function(tar){ 
+	$(".tbody table").html('');
+	$.each(result,function(i,n){
+		console.log(i);
+		console.log(n);
+		console.log(n[tar]);
+		var item = n[tar];  //更改json数据的项
+		for(var j = 0; j < item.length; j++){
+			var nl = '<tr>';  //一条数据
+				nl += '<td class="radio">';
+				nl += '<input name="back" type="radio">';
+				nl += '</td>';
+				nl += '<td class="tablenomal">'+item[j].first+'</td>';
+				nl += '<td class="tablenomal">'+item[j].seccond+'</td>';
+				nl += '</tr>';
+			
+			$('.tbody table').append(nl);
+		}
 
-
-Stage.prototype.myAjax=function(tar){  
-		$(".tbody table").html('');
-		$.ajax({
-			type:'GET',
-			url:'test.json',
-			dataType:'json',
-			success:function(data){
-				$.each(data,function(i,n){
-					console.log(i);
-					console.log(n);
-					console.log(n[tar]);
-					var item = n[tar];  //更改json数据的项
-					for(var j = 0; j < item.length; j++){
-						var nl = '<tr>';  //一条数据
-							nl += '<td class="radio">';
-							nl += '<input type="radio">';
-							nl += '</td>';
-							nl += '<td class="tablenomal">'+item[j].first+'</td>';
-							nl += '<td class="tablenomal">'+item[j].seccond+'</td>';
-							nl += '</tr>';
-						
-						$('.tbody table').append(nl);
-					}
-
-				});
-			},
-			error:function(e){
-				console.log('cuole')
-			}
-		});
+	});
 }
+
+
 
 Stage.prototype.myClick=function(){
 	$('.header .photo').click(function(){ /*侧滑栏*/
