@@ -15,25 +15,27 @@
 
 			<div class="side-b side">工作台</div>
 			<ul >
-				<li>ddd</li>
-				<li>aaa</li>
-				<li>eee</li>
+				<li>系统设置</li>
 			</ul>
 
 			<div class="side-c side">系统管理</div>
 			<ul >
-				<li>ddd</li>
-				<li>aaa</li>
-				<li>eee</li>
+				<li>用户管理</li>
+				<li>系统设置</li>
+				<li>部门管理</li>
+				<li>系统日志</li>
 			</ul>
 
 			<div class="side-d side">系统配置</div>
 			<ul >
-				<li>ddd</li>
-				<li class="testMy">aaa</li>
-				<li class="testClick">eee</li>
+				<li>权限管理</li>
+				<li>角色管理</li>
+				<li>菜单管理</li>
 			</ul>
+			<div class="side-e side">自定义权限</div>
+			<ul >
 
+			</ul>
 		</div>
 		<!-- 首页面 -->
 		<div class="container">
@@ -51,7 +53,7 @@
 						<li id="query">查询</li>
 					</ul>
 				</div>
-				
+				<!-- 点击增加按钮弹框 -->
 				<div class="op-container">
 					<div class="op-cre">
 						<form method="POST" onsubmit="return false">
@@ -67,6 +69,7 @@
 						</form>
 					</div>
 				</div>
+				<!-- 可以append区域 -->
 				<div class="tbody">
 					<table>
 						<!-- <tr>
@@ -78,6 +81,48 @@
 						</tr> -->
 					</table>
 				</div>
+				<!-- 可见显示区域 -->
+				<div class="kth">
+					<div class="k-left">
+						<table>
+							<tr>
+								<th class="f1"><input id="nimabi" type="checkbox" name="choice"></th>
+								<th class="ff">用户名</th>
+								<th class="ff">姓名</th>
+								<th class="ff">所属部门</th>
+								<th class="ff">状态</th>
+								<!-- <th>创建时间</th>
+								<th>最后登录时间</th>
+								<th>最后登录IP</th> -->
+								<th class="ff">操作</th>
+							</tr>
+							<tr>
+								<td class="f1"><input type="checkbox" name="checkbox"></td>
+								<td class="ff">陈建芳</td>
+								<td class="ff">陈建芳</td>
+								<td class="ff">软件部</td>
+								<td class="ff">启用</td>
+								<td class="ff">停用</td>
+								
+							</tr>
+							<tr>
+								<td class="f1"><input type="checkbox" name="checkbox"></td>
+								<td class="ff">陈建芳</td>
+								<td class="ff">陈建芳</td>
+								<td class="ff">软件部</td>
+								<td class="ff">启用</td>
+								<td class="ff">停用</td>
+								
+							</tr>
+						</table>
+					</div>
+					<input type="button" value="更多" class="k-right">
+				</div>
+
+
+
+
+
 			</div>
 		</div>
 	</div>

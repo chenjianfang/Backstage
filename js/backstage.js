@@ -1,9 +1,9 @@
 var result;  // 获得从后台返回的数据
 
-$(function(){
+$(function(){  //获得json数据并赋值给全局变量
 	$.ajax({
 		type:'GET',
-		url:'http://127.0.0.1:8080/test.json',
+		url:'test.json',
 		dataType:'json',
 		success:function(data){
 			result = data;
@@ -30,9 +30,15 @@ Stage.prototype.operation = function(){  //增删改查操作
 	$('.data-push').click(function(){
 		$(this).parents('.op-container').hide();
 	});
+	$('th.f1 input').click(function(){  //反选
+		var arr = $("input[name='checkbox']");
+		for(var i=0;i<arr.length;i++){ 
+			arr[i].checked = ! arr[i].checked; 
+		} 
+	});
 };
 
-Stage.prototype.myAjax=function(tar){ 
+Stage.prototype.myAjax=function(tar){  //后台获得的数据动态添加到页面
 	$(".tbody table").html('');
 	$.each(result,function(i,n){
 		console.log(i);

@@ -95,7 +95,13 @@ a{
 }
 .side-d{
 	width: 100%;
-	background: url(../images/setting.png) no-repeat;
+	background: url(../images/tip.png) no-repeat;
+	background-size: 20px;
+	background-position: 10px center;
+}
+.side-e{
+	width: 100%;
+	background: url(../images/view.png) no-repeat;
 	background-size: 20px;
 	background-position: 10px center;
 }
@@ -145,35 +151,6 @@ ul{
 	box-shadow: 2px 0 2px #ddd;
 	font-weight: 500;
 
-}
-.tbody{
-	padding-left: 20px;
-	box-sizing:border-box;
-	margin-top: 20px;
-	border-top: 1px solid #ccc;
-}
-.tbody table{
-	font-size: 16px;
-	font-weight: 500;
-}
-table{ 
-	border-collapse:collapse;
-}
-.tbody tr{
-	border-bottom: 1px solid #ccc;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-}
-.tbody tr td{
-	height: 30px;
-	line-height: 30px;
-	text-align: center;
-}
-.radio{
-	width: 40px;
-}
-.tablenomal{
-	width: 80px;
 }
 .op-container{
 	width: 100%;
@@ -225,4 +202,57 @@ input{
 	padding-left: 0!important;
 	font-size: 16px;
 	font-weight: 700;
+}
+/*可见显示区域css*/
+table{ 
+	border-collapse:collapse;
+}
+.kth table{
+	width: 100%;
+}
+.kth{
+	width: 100%;
+	min-width:320px; 
+	margin: 0 auto;
+	box-sizing:border-box;
+	font-size: 14px;
+	margin-top: 20px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display:flex;
+}
+.kth tr{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display:flex;
+}
+.kth tr .f1{
+	width: 31px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #ccc;
+	box-sizing:border-box;
+}
+.kth tr .ff{
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #ccc;
+	box-sizing:border-box;
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+}
+.k-left{
+	-webkit-box-flex:13;
+	-webkit-flex:13;
+	flex:13;
+}
+.k-right{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	height: 30px;
+	border: 1px solid #ccc;
 }
